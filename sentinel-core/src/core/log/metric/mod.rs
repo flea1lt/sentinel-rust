@@ -57,7 +57,7 @@ pub trait MetricSearcher {
 }
 
 // Generate the metric file name from the service name.
-fn form_metric_filename(service_name: &str, with_pid: bool) -> String {
+pub fn form_metric_filename(service_name: &str, with_pid: bool) -> String {
     let separator = "-";
     let mut filename = if service_name.contains('.') {
         service_name.replace('.', separator)
